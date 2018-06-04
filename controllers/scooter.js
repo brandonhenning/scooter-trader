@@ -26,10 +26,10 @@ exports.getScooters = (request, response) => {
 
 // Create endpoint scooters/:scooter_id for GET
 exports.getScooter = (request, response) => {
-    Scooter.findById(request.params.scooter_id, (error, beer) => {
+    Scooter.findById(request.params.scooter_id, (error, scooter) => {
         if (error)
             response.send(error)
-        response.json(beer)
+        response.json(scooter)
     })
 }
 
